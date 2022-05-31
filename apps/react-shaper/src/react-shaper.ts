@@ -1,3 +1,4 @@
+import reactStarterPlugin from '@code-shaper/react-starter';
 import {
   getPluginChoices,
   Options,
@@ -28,6 +29,7 @@ function registerDynamicPlugin(plugin: Plugin) {
 }
 
 // ----- Register static plugins here -----
+registerStaticPlugin(reactStarterPlugin);
 
 // Register dynamic plugins
 const plugins = PluginUtils.getDynamicPlugins();

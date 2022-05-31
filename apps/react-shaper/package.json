@@ -16,6 +16,7 @@
     "clean": "rimraf .turbo node_modules dist coverage test-output"
   },
   "dependencies": {
+    "@code-shaper/react-starter": "*",
     "@code-shaper/shaper-utils": "*",
     "inquirer": "^8.2.4",
     "inquirer-directory": "^2.2.0",
