@@ -1,7 +1,8 @@
 # react-shaper
 
-An example of using Code Shaper to create a custom CLI to generate a fully
-opinionated React app. See the
+An example of using Code Shaper to create a custom CLI. This CLI generates a
+fully opinionated React app, similar to
+[create-react-app](https://create-react-app.dev/). See the
 [how-to guide](https://www.code-shaper.dev/docs/how-to-guides/creating-a-custom-cli)
 for more details.
 

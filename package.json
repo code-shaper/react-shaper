@@ -1,9 +1,14 @@
 {
   "name": "react-shaper",
-  "description": "",
+  "description": "An example of using Code Shaper to create a custom CLI",
   "version": "0.0.1",
   "private": true,
+  "author": "Naresh Bhatia",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-shaper/react-shaper.git"
+  },
   "workspaces": [
     "apps/*",
     "configs/*",
