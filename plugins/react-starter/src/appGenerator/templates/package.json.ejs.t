@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/runtime": "^7.18.3",
     "@mdx-js/react": "^1.6.22",
-    "@storybook/addon-a11y": "6.5.6",
+    "@storybook/addon-a11y": "^6.5.6",
     "@storybook/addon-actions": "^6.5.6",
     "@storybook/addon-essentials": "^6.5.6",
     "@storybook/addon-interactions": "^6.5.6",
@@ -48,18 +48,18 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^17.0.36",
-    "@types/react": "^18.0.9",
+    "@types/jest": "^28.1.0",
+    "@types/node": "^17.0.39",
+    "@types/react": "^18.0.11",
     "@types/react-dom": "^18.0.5",
-    "cypress": "^9.7.0",
+    "cypress": "^10.0.2",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.3",
+    "lint-staged": "^13.0.0",
     "msw": "^0.42.0",
     "prettier": "^2.6.2",
     "pretty-quick": "^3.1.3",
     "react-scripts": "5.0.1",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.3"
   },
   "overrides": {
     "react": "^18.1.0",
