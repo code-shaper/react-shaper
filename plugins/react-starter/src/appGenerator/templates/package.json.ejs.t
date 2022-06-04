@@ -41,7 +41,6 @@
     "@storybook/builder-webpack5": "^6.5.6",
     "@storybook/manager-webpack5": "^6.5.6",
     "@storybook/node-logger": "^6.5.6",
-    "@storybook/preset-create-react-app": "^4.1.1",
     "@storybook/react": "^6.5.6",
     "@storybook/testing-library": "^0.0.11",
     "@testing-library/dom": "^8.13.0",
