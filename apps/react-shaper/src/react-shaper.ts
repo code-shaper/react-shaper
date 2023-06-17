@@ -16,8 +16,6 @@ const staticPlugins: PluginMap = {};
 const dynamicPlugins: PluginMap = {};
 
 // ---------- Plugin Registration ----------
-// TODO: Remove ts-ignore once you start using registerStaticPlugin
-// @ts-ignore
 function registerStaticPlugin(plugin: Plugin) {
   const { id } = plugin;
   staticPlugins[id] = plugin;
@@ -28,11 +26,11 @@ function registerDynamicPlugin(plugin: Plugin) {
   dynamicPlugins[id] = plugin;
 }
 
-// ----- Register static plugins here -----
+// Register static plugins
 registerStaticPlugin(reactStarterPlugin);
 
 // Register dynamic plugins
-const plugins = PluginUtils.getDynamicPlugins();
+const plugins = PluginUtils.getDynamicPlugins(process.cwd());
 plugins.forEach(registerDynamicPlugin);
 
 // ---------- Run CLI ----------

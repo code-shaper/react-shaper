@@ -4,17 +4,17 @@ import path from 'path';
 
 export const appGenerator: Generator = {
   id: 'app',
-  name: 'App',
-  description: 'generates a App',
+  name: 'Application',
+  description: 'generates a React application',
   generate: generateApp,
 };
 
-async function generateApp(inputOptions: Options) {
+async function generateApp(rootDir: string, inputOptions: Options) {
   const questions = [
     {
       type: 'input',
       name: 'itemName',
-      message: 'App name? (e.g. "movie-magic")',
+      message: 'Application name? (e.g. "movie-magic")',
     },
   ];
 
@@ -24,6 +24,8 @@ async function generateApp(inputOptions: Options) {
   // --------------------------------------------------------------------------
   // Add more options for code generation here
   // --------------------------------------------------------------------------
+  // Example: itemName = movie-magic
+
   // itemNameKebabCase = movie-magic
   options['itemNameKebabCase'] = cc.kebabCase(itemName);
 
@@ -40,7 +42,7 @@ async function generateApp(inputOptions: Options) {
   const { itemNameKebabCase } = options;
 
   const srcDir = path.join(__dirname, 'templates');
-  const dstDir = path.join(process.cwd(), itemNameKebabCase);
+  const dstDir = path.join(rootDir, itemNameKebabCase);
 
   console.log();
   console.log(`Creating ${itemName}...`);

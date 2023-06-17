@@ -20,14 +20,14 @@ registerGenerator(appGenerator);
 const reactStarterPlugin: Plugin = {
   id: '@code-shaper/react-starter',
   name: 'React Starter',
-  description: 'generates react-starter artifacts',
+  description: 'generates React applications',
   run: async (inputOptions: Options) => {
     const generator = await selectGenerator(generators, inputOptions);
     if (!generator) {
       return Promise.resolve();
     }
 
-    return generator.generate(inputOptions);
+    return generator.generate(process.cwd(), inputOptions);
   },
 };
 

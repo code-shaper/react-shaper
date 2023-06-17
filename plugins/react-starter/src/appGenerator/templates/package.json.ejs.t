@@ -1,122 +1,63 @@
 {
-  "name": "<%= itemNameKebabCase %>",
+  "name": "<%= packageName %>",
   "description": "<%= itemNameCapitalCase %>",
-  "version": "0.1.0",
-  "author": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "private": true,
+  "version": "0.0.1",
   "scripts": {
-    "build": "react-scripts build",
-    "build-storybook": "build-storybook -s public",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "jest",
     "cypress": "cypress open",
-    "eject": "react-scripts eject",
-    "format": "prettier --write README.md \"src/**/{*.md,*.json,*.css,*.ts*}\" \"cypress/integration/**/*\"",
-    "lint": "eslint src",
-    "prepare": "husky install",
-    "start": "react-scripts start",
-    "storybook": "start-storybook -p 6006 -s public",
-    "test": "npm run lint && npm run test:coverage",
-    "test:coverage": "react-scripts test --coverage --watchAll=false",
-    "test:update": "react-scripts test --watchAll=false --updateSnapshot",
-    "test:watch": "react-scripts test"
+    "clean": "rimraf .turbo node_modules dist coverage test-output"
   },
   "dependencies": {
-    "history": "^5.3.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-router-dom": "^6.3.0",
-    "web-vitals": "^2.1.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.0"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.18.3",
-    "@mdx-js/react": "^1.6.22",
-    "@storybook/addon-a11y": "^6.5.6",
-    "@storybook/addon-actions": "^6.5.6",
-    "@storybook/addon-essentials": "^6.5.6",
-    "@storybook/addon-interactions": "^6.5.6",
-    "@storybook/addon-links": "^6.5.6",
-    "@storybook/builder-webpack5": "^6.5.6",
-    "@storybook/manager-webpack5": "^6.5.6",
-    "@storybook/node-logger": "^6.5.6",
-    "@storybook/react": "^6.5.6",
-    "@storybook/testing-library": "^0.0.11",
-    "@testing-library/dom": "^8.13.0",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.0",
-    "@types/jest": "^28.1.0",
-    "@types/node": "^17.0.39",
-    "@types/react": "^18.0.11",
-    "@types/react-dom": "^18.0.5",
-    "cypress": "^10.0.2",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.0",
-    "msw": "^0.42.0",
-    "prettier": "^2.6.2",
-    "pretty-quick": "^3.1.3",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.7.3"
+    "@storybook/react": "^7.0.7",
+    "@testing-library/dom": "^9.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cypress": "^12.11.0",
+    "eslint": "^8.39.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "lint-staged": "^13.2.1",
+    "msw": "1.2.1",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.3",
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "overrides": {
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-refresh": "0.13.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },  
+  "msw": {
+    "workerDirectory": "public"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json}": "prettier --write"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {},
-    "overrides": [
-      {
-        "files": [
-          "**/*.ts?(x)"
-        ],
-        "rules": {
-          "@typescript-eslint/no-unused-vars": "error"
-        }
-      }
-    ]
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.stories.{js,jsx,ts,tsx}",
-      "!src/mocks/**",
-      "!src/stories/**",
-      "!src/test/**",
-      "!src/index.tsx",
-      "!src/reportWebVitals.ts"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      }
-    }
-  },
-  "msw": {
-    "workerDirectory": "public"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "packageManager": "npm@8.15.0"
 }

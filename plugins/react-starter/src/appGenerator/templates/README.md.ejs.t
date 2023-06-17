@@ -1,6 +1,6 @@
 # <%= itemNameCapitalCase %>
 
-This project was bootstrapped with
+This is a React app bootstrapped with
 [React Shaper](https://github.com/code-shaper/react-shaper).
 
 ## Running the App
@@ -12,7 +12,7 @@ Execute the following commands to run the app.
 npm install
 
 # Run the app
-npm start
+npm run dev
 ```
 
 Now point your browser to http://localhost:3000.
@@ -26,17 +26,15 @@ npm run storybook
 ## Running Unit Tests
 
 ```shell
-npm run test # run tests with code coverage
-npm run test:watch # run tests in interactive mode
+npm run test
 ```
 
 ## Running End-to-End Tests
 
-React Accelerate comes ready with Cypress to run end-to-end tests. Execute
-Cypress using the following commands:
+To run end-to-end tests, execute Cypress using the following commands:
 
 ```sh
-npm start # starts a local server hosting your react app
+npm run dev # starts a local server hosting your react app
 
 # run cypress in a different shell
 npm run cypress
