@@ -1,11 +1,16 @@
 {
   "name": "react-shaper",
   "description": "React Shaper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publishConfig": {
     "access": "public"
   },
   "main": "./dist/index.js",
+  "files": [
+    "bin/react-shaper",
+    "dist",
+    "README.md"
+  ],
   "bin": {
     "react-shaper": "bin/react-shaper"
   },
@@ -13,7 +18,7 @@
     "build": "rimraf dist && tsc && copyfiles --all --up 1 \"src/**/templates/**/*\" dist",
     "lint": "eslint src/**/*.ts*",
     "test": "echo No tests in this package yet",
-    "clean": "rimraf .turbo node_modules dist coverage test-output"
+    "clean": "rimraf .turbo node_modules dist coverage **/test-output"
   },
   "dependencies": {
     "@code-shaper/react-starter": "*",
