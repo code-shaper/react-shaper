@@ -16,6 +16,12 @@ async function generateApp(rootDir: string, inputOptions: Options) {
       name: 'itemName',
       message: 'Application name? (e.g. "movie-magic")',
     },
+    {
+      type: 'input',
+      name: 'packageName',
+      message:
+        'Package name used for publishing? (e.g. "movie-magic" or "@movie-magic/movie-magic")',
+    },
   ];
 
   const options = await inquirer.prompt(questions, inputOptions);
