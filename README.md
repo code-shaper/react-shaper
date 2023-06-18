@@ -18,6 +18,7 @@ cd ~/projects
 # Run React Shaper and follow the prompts
 react-shaper
 ? App name? hello-world
+? Package name used for publishing? @my-company/hello-world
 
 Creating hello-world...
   package.json
@@ -30,7 +31,7 @@ Done. Now run:
   npm install
   git add .
   git commit -m "initial commit"
-  npm start
+  npm run dev
 ```
 
 Point your browser to http://localhost:3000 to see the home page.

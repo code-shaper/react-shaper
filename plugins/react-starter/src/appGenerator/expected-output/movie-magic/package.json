@@ -21,6 +21,7 @@
     "react-router-dom": "^6.11.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.0.22",
     "@storybook/addon-essentials": "^7.0.22",
     "@storybook/addon-interactions": "^7.0.22",
     "@storybook/addon-links": "^7.0.22",
