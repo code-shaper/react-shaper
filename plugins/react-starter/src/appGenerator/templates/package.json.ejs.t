@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "jest",
+    "format": "prettier --write README.md \"src/**/{*.md,*.json,*.css,*.ts*}\" \"cypress/integration/**/*\"",
     "cypress": "cypress open",
     "clean": "rimraf .turbo node_modules dist coverage test-output",
     "storybook": "storybook dev -p 6006",
